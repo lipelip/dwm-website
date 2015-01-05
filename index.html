@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>Design Web &amp; Multimedia - Design Web &amp; Multimedia - Ecole Supérieure d&#039;Infographie Albert Jacquard</title>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="//use.typekit.net/rzg3jqy.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+		
+		<!- https://github.com/viljamis/TinyNav.js ->
+	    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script src="js/tinynav.min.js"></script>
+		<script>
+		$(function () {
+			$('#nav').tinyNav({});
+		});
+		</script>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+			/* Reset le même que tu utilises
+			--------------------------------------------- */
+			html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+				margin: 0;
+				padding: 0;
+				font-size: 100%;
+				vertical-align: baseline;
+				border: 0;
+				outline: 0;
+				background: transparent;
+			}	
+			ol, ul {
+				list-style: none;
+			}
+			blockquote, q {
+				quotes: none;
+			}
+			table {
+				border-collapse: collapse;
+				border-spacing: 0;
+			}
+			/* `Styles
+			----------------------------------------------------------------------------------------------------*/
+			
+			body{
+				font: 18px/1.5 "adelle", georgia, serif;
+				color: #2a2a2a;
+				-webkit-font-smoothing: antialiased;
+			}
+			
+			header{
+				background: url(dwm.jpg) no-repeat center fixed;
+				background-size: cover;
+				height: 395px;
+				position: relative;
+			}
+			header #logo {
+				display: block;
+				
+				/*
+				color: #fff;
+				font: 60px helvetica, arial, sans-serif;
+				font-weight: normal;
+				text-decoration: none;
+				text-shadow: 0 0 10px #000;
+				*/
+				
+				width: 143px;
+				height: 52px;
+				text-indent: -9999px;
+				background: url(dwm-logo.png) no-repeat center;
+				
+				position: absolute;
+				top: 25%; left: 50%;
+				margin: 0 0 0 -94px;
+				
+				padding: 20px 30px;
+				border: 6px solid #FFF;
+				border-radius: 2px;
+				
+				letter-spacing: -2px;
+			}
+
+			header .tinynav { display: none }
+			header nav ul { list-style: none; }
+				header nav li {
+					position: absolute;
+					top: 36%;
+					left: 50%;
+					margin: 0 0 0 -300px;
+					z-index: 20;
+					
+				}
+				header nav li.widget_yd_wpmubl {
+					margin: 0 0 0 225px;
+				}
+				header nav ul ul {
+					/* avec animation */
+					opacity: 0;  position: absolute; left: -9999px;
+					-webkit-transition: opacity .2s linear;
+					   -moz-transition: opacity .2s linear;
+					   		transition: opacity .2s linear;
+					/* sans animation */
+					/* display:none */
+				}
+				
+				header nav ul li:hover ul { 
+					/* avec animation */
+					left: 0; opacity: 1;
+					/* sans animation */
+					/* display:block */
+
+					background: #fff;	
+					border-radius: 0 2px 2px 2px;
+					position: relative; top: 5px;
+				}			
+				header nav li li {
+					margin: 0;
+					position: relative;
+					top: 0; left: 0;
+					background: none;
+				}
+					
+				header nav li a {
+					color: #2a2a2a;
+					text-decoration: none;
+					padding: 10px;
+					background: #fff;
+					border-radius: 2px;
+					font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+				}
+
+					header nav li li a {
+						display: block;
+						padding: 5px 8px;
+						font-size: 14px;
+						font-weight: 300;
+
+					}
+						header nav li li a:hover {
+							background-color: #537092;
+							color: #fff;
+						}
+				
+			/* Le fond blanc entre header et footer */
+			#main { 
+				background: #fff; 
+				padding: 60px 0; 
+				box-shadow: 0px 0px 5px rgba(0,0,0,.3); 
+				position: relative; 
+				z-index: 10;
+			}
+			
+			/* la zone de contenu */
+			.container {
+				width: 60%;
+				max-width: 1200px;
+				padding: 0 10%;
+				margin: 0 auto;
+			}
+			
+			article {margin: 0 0 60px 0; }
+			article .wp-post-image {
+				position: relative;
+				left: -12.5%;
+				margin-right: -8.75%;
+				float: left;
+				padding: 1%;
+				border: 2px solid #f0f2f8;				
+				margin-top: 6px;
+			}
+				article .wp-post-image:hover {
+					border-color: #b1b8cd;
+				}
+			
+			#pagination { overflow: hidden; }
+				#pagination .previous { float: left; }
+				#pagination .next { float: right; }
+
+			footer {
+				height: 380px;
+				padding-top: 18px;
+				font-size: 14px;
+				line-height: 1.6;
+				background: url(footer.jpg) no-repeat center bottom fixed;
+				background-size: contain;
+			}
+			footer ul.footer { width: 94%; max-width: 1200px; margin: 0 auto; }
+			footer ul { list-style: none; }
+		
+			ul.footer li.widget-container {
+				float: left;
+				width: 16%;
+				margin-right: 4%;
+			}
+				ul.footer li.widget-container:first-child { width: 40%; }
+				ul.footer li.widget-container:last-child { margin-right: 0; }
+
+			ul.footer li.widget-container li {
+				margin: 5px 0;
+			}
+			
+			
+			/* `Typo & link
+			----------------------------------------------------------------------------------------------------*/
+			
+			h2 {
+				font: 700 32px/1.3 "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+				padding-bottom: 27px;
+			}
+				h2 a { color: #333; text-decoration: none; }
+				h2 a:hover { color: #537092; }
+			
+			strong { font-weight: 600; }
+			
+			p { margin: 18px 0; }
+			
+				p a {
+					color: #537092;
+					text-decoration: none;
+					border-bottom: 1px solid #79A6DC;
+				}
+				p a:hover { color: #79A6DC; }		
+			
+			article p:first-of-type {
+				font-weight: 400;
+				font-style: italic;
+				font-size: 23px;
+				color: #7a8490;
+				margin: 0 0 18px 0;
+			}
+				article p:first-of-type a {
+					color: #79A6DC;
+					text-decoration: none;
+					border-bottom: none;
+				}
+				article p:first-of-type a:hover { color: #537092; }
+			
+			
+			.meta {
+				font-size: 14px;
+				color: #5f5e5e;
+				border-top: 2px solid #f0f2f8;
+				border-bottom: 2px solid #f0f2f8;
+				padding: 9px 0;
+			}
+				.meta a { border-bottom: none; }
+			
+			
+			footer ul h3 {
+				font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+				font-size: 18px;
+				padding-bottom: 9px;
+				color: #fff;
+				text-shadow: 0 0 2px #000;
+			}
+			ul.footer li a {
+				color: #4d4d4d;
+				text-decoration: none;
+				border: none;
+				background: rgba(255,255,255,.8);
+				padding: 3px 2px;
+			}
+				ul.footer li a:hover { color: #537092; background: rgba(255,255,255,1); }	
+				ul.footer #social_connect-2 a { background: none; } 
+			
+			
+			
+			/* `media queries
+			----------------------------------------------------------------------------------------------------*/		
+			
+			@media only screen 
+			and (max-width : 1024px) {
+				/* typo */
+				body{ font: 16px/1.5 georgia, serif; }
+				h2 { font: 700 27px/1.3 Helvetica, Arial, sans-serif; }	
+				footer ul h3 { font-family: Helvetica, Arial, sans-serif; }
+				
+				/* layout */
+				
+				.container, footer ul.footer { width: 70%; padding: 0 5%; }	
+				
+				footer {
+					height: 400px;
+					background-size: cover;
+					background-position: 80% top;
+				}
+				footer ul.footer { width: 70%; padding: 0 5%; position: relative; }
+				ul.footer li.widget-container:first-child { float: none; width: 70%;  }
+				footer #social_connect-2 { position: absolute; top: 0; right: 0; width:30%}
+				footer #categories-2, footer #meta-2 {
+					width: 47%; margin: 20px 6% 0 0;	
+				}
+				footer #categories-2 li, footer #meta-2 li { float: left; margin-right: 2%; }
+				footer #meta-2 { margin-right: 0; }
+			}
+
+			@media only screen 
+			and (max-width : 767px) {
+				
+				header .tinynav { display: block; position: absolute; width: 188px; left: 50%; top: 70%; margin-left: -94px; }
+				header #nav { display: none }
+
+				.container, footer ul.footer { width: 80%; padding: 0; }
+
+				article .wp-post-image {
+					left: 0;
+					margin: 0 auto 18px;
+					display: block;
+					float: none;
+					width: 250px;
+				}
+				
+				footer { height: auto; }
+				ul.footer li.widget-container:first-child { width: 100%; }
+				footer #social_connect-2 { position: relative; float: none; width: 100%; clear: both;}
+			}	
+			
+		</style>
+	</head>
+	<body>
+			
+		<header>
+			
+			<h1><a id="logo" href="#">Design web et multimédia</a></h1>
+			
+			<nav>
+				<ul id="nav">		
+					<li id="pages-3" class="widget-container widget_pages"><h3 class="widget-title"><a href="#">Pages</a></h3>		
+						<ul>
+							<li class="page_item page-item-188"><a href="http://dwm.infographie-sup.be/codex/">Codex</a></li>
+							<li class="page_item page-item-199"><a href="http://dwm.infographie-sup.be/data-visualisation-workshop/">Data Visualisation</a></li>
+							<li class="page_item page-item-232"><a href="http://dwm.infographie-sup.be/sur-twitter/">DWM Sur twitter</a></li>
+							<li class="page_item page-item-211"><a href="http://dwm.infographie-sup.be/lectures-conseillees/">Lectures conseillées</a></li>
+							<li class="page_item page-item-77"><a href="http://dwm.infographie-sup.be/presentation/">Présentation</a></li>
+						</ul>
+					</li>
+					<li id="yd-wpmu-bloglist" class="widget-container widget_yd_wpmubl"><h3 class="widget-title"><a href="#">Sites à projet</a></h3>
+						<ul class="blog_list">
+							<li><a href="http://dwm.infographie-sup.be/wkid01" title="projet WK.ID/01">WK.ID/01</a></li>
+							<li><a href="http://dwm.infographie-sup.be/dataviz01" title="projet DATA.VIZ/01">DATA.VIZ/01</a></li>
+							<li><a href="http://dwm.infographie-sup.be/dataviz02" title="projet DATA.VIZ/02">DATA.VIZ/02</a></li>
+							<li><a href="http://dwm.infographie-sup.be/dataviz03" title="projet DATA.VIZ/03">DATA.VIZ/03</a></li>
+							<li><a href="http://dwm.infographie-sup.be/tfe" title="projet DWM / TFE">DWM / TFE</a></li>
+						</ul>
+					</li>
+				</ul>
+				
+			</nav>
+			
+		</header>
+		
+		<div id="main">
+		
+			<div class="container">	
+			
+				<article id="post">
+		
+					<h2><a href="http://dwm.infographie-sup.be/visualizing-marathon-9-au-11-novembre-2012/" title="Permalien vers Visualizing Marathon &#8211; 9 au 11 novembre 2012" rel="bookmark">Visualizing Marathon &#8211; 9 au 11 novembre 2012</a></h2>
+					
+					<p>Notre école est invitée à participer au prochain Visualizing Marathon organisé par <a href="http://visualizing.org" title="Aller sur le site de visualizing.org" target="_blank">Visualizing.org</a> (dont nous sommes un <em>Academic Partner</em>), une compétition de data visualisation opposant des équipes du monde entier.</p>
+					
+					<a href="http://dwm.infographie-sup.be/visualizing-marathon-9-au-11-novembre-2012/"><img width="300" height="200" src="http://dwm.infographie-sup.be/wp-content/uploads/2012/08/Capture-d’écran-2012-08-24-à-12.00.57.png" class="attachment-medium wp-post-image" alt="Visualizing Marathon 2012" title="Visualizing Marathon 2012" /></a>
+					
+					<p>Nous comptons monter une équipe avec les étudiants de DWM et éventuellement de prépresse / communication graphique entouré de plusieurs professeurs.</p>
+					<p>Le marathon aura lieu à l’école du vendredi 9 au dimanche 11 novembre 2012. notre réponse est attendue pour le 14 septembre.</p>
+						
+					<p>A ce stade, nous souhaitons sonder l’intérêt des étudiants et professeurs pour estimer la logistique nécessaire. Si vous êtes tenté par l’aventure, <a href="https://docs.google.com/spreadsheet/viewform?formkey=dFdROFBXemx2VU0yOU9tdzgtYmNkdHc6MQ" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://docs.google.com']);" title="S'inscrire au Marathon 2012" target="_blank">veuillez vous inscrire ici</a>, merci !</p>	
+							
+					<p><a href="#">Lire la suite →</a></p>		
+								
+					<p class="meta"><span><a href="http://dwm.infographie-sup.be/visualizing-marathon-9-au-11-novembre-2012/">24. août 2012</a> par Alexandre Plennevaux</span><br/>
+					Catégories: <a href="http://dwm.infographie-sup.be/category/data-visualization/" title="Voir tous les articles dans Data Visualization" rel="category tag">Data Visualization</a> | 
+					Tags: <a href="http://dwm.infographie-sup.be/tag/data-visualisation/" rel="tag">data visualisation</a>, <a href="http://dwm.infographie-sup.be/tag/visualizing/" rel="tag">visualizing</a>	| 
+					<a href="http://dwm.infographie-sup.be/visualizing-marathon-9-au-11-novembre-2012/#respond" title="Commentaire sur Visualizing Marathon &#8211; 9 au 11 novembre 2012">Laisser un commentaire</a></p>
+		
+				</article>
+				
+				
+				<article id="post">
+		
+					<h2><a href="http://dwm.infographie-sup.be/beyond-tellerrand-2012-pre-inscriptions/" title="Permalien vers Beyond Tellerrand 2012 – pré-inscriptions" rel="bookmark">Beyond Tellerrand 2012 – pré-inscriptions</a></h2>
+		
+					<a href="http://dwm.infographie-sup.be/beyond-tellerrand-2012-pre-inscriptions/"><img width="300" height="200" src="http://dwm.infographie-sup.be/wp-content/uploads/2012/06/CSC0033.jpg" class="attachment-medium wp-post-image" alt="Visualizing Marathon 2012" title="Visualizing Marathon 2012" /></a>
+					
+					<p>La deuxième édition de la conférence «&nbsp;Beyond Tellerrand&nbsp;» à Dusseldorf est annoncée. 17 valeureux DWMiens y avons assisté l’année dernière et c’était une superbe expérience pour les <em>web builders</em> que nous sommes. <span id="more-296"></span></p>
+		
+					<p>La conférence aura lieu du <strong>19 au 21 novembre 2012 à Düsseldorf</strong>. (<a href="http://2012.beyondtellerrand.com/">visite le site</a> pour voir le programme et les conférenciers programmés). C’est pendant les stages, mais vu le nombre d’étudiants de 3tid qui y ont participé l’année dernière, ce n’est pas un problème pour les entreprises de vous libérer pour ces 2 jours, quitte à les récupérer par après.</p>
+		
+					<p>Le budget total à prévoir pour les 2 jours de conférence est de <strong>150 EUR max</strong>. Grâce à un deal accordé à notre groupe dont je ne peux à ce stade révéler le montant, mais il est très généreux.</p>
+					
+							
+					<p><a href="#">Lire la suite →</a></p>		
+								
+					<p class="meta"><span><a href="http://dwm.infographie-sup.be/visualizing-marathon-9-au-11-novembre-2012/">24. août 2012</a> par Alexandre Plennevaux</span><br/>
+					Catégories: <a href="http://dwm.infographie-sup.be/category/data-visualization/" title="Voir tous les articles dans Data Visualization" rel="category tag">Data Visualization</a> | 
+					Tags: <a href="http://dwm.infographie-sup.be/tag/data-visualisation/" rel="tag">data visualisation</a>, <a href="http://dwm.infographie-sup.be/tag/visualizing/" rel="tag">visualizing</a>	| 
+					<a href="http://dwm.infographie-sup.be/visualizing-marathon-9-au-11-novembre-2012/#respond" title="Commentaire sur Visualizing Marathon &#8211; 9 au 11 novembre 2012">Laisser un commentaire</a></p>
+		
+				</article>
+				
+				<div id="pagination">
+					<p class="previous"><a href="http://dwm.infographie-sup.be/web-basement-2012-emotion-design/" rel="prev">←  Previous Post</a></p>
+					<p class="next"><a href="http://dwm.infographie-sup.be/visualizing-marathon-9-au-11-novembre-2012/" rel="next">Next Post →</a></p>
+				</div>
+		
+			</div><!-- end container -->
+		
+		</div><!-- end main -->
+		
+		
+		<footer>
+
+
+			<ul class="footer">
+				<li id="recent-posts-2" class="widget-container widget_recent_entries">		
+					<h3 class="widget-title">Articles récents</h3>		
+					<ul>
+						<li><a href="http://dwm.infographie-sup.be/visualizing-marathon-9-au-11-novembre-2012/" title="Visualizing Marathon – 9 au 11 novembre 2012">Visualizing Marathon – 9 au 11 novembre 2012</a></li>
+						<li><a href="http://dwm.infographie-sup.be/beyond-tellerrand-2012-pre-inscriptions/" title="Beyond Tellerrand 2012 – pré-inscriptions">Beyond Tellerrand 2012 – pré-inscriptions</a></li>
+						<li><a href="http://dwm.infographie-sup.be/web-basement-2012-emotion-design/" title="Web basement 2012: emotion design">Web basement 2012: emotion design</a></li>
+						<li><a href="http://dwm.infographie-sup.be/data-visualisation-workshop-03-martin-de-wulf/" title="Data Visualisation Workshop 03: Martin De Wulf">Data Visualisation Workshop 03: Martin De Wulf</a></li>
+						<li><a href="http://dwm.infographie-sup.be/2-etudiants-remportent-euroskills/" title="2 étudiants représenteront la Belgique à l’Euroskills 2012">2 étudiants représenteront la Belgique à l’Euroskills 2012</a></li>
+					</ul>
+				</li>
+				<li id="categories-2" class="widget-container widget_categories">
+					<h3 class="widget-title">Catégories</h3>		
+					<ul>
+						<li class="cat-item cat-item-21"><a href="http://dwm.infographie-sup.be/category/actualites/" title="Voir tous les articles classés dans Actualités">Actualités</a></li>
+						<li class="cat-item cat-item-5"><a href="http://dwm.infographie-sup.be/category/data-visualization/" title="Voir tous les articles classés dans Data Visualization">Data Visualization</a></li>
+						<li class="cat-item cat-item-1"><a href="http://dwm.infographie-sup.be/category/web-multimedia/" title="Voir tous les articles classés dans web &amp; multimedia">web &amp; multimedia</a></li>
+						<li class="cat-item cat-item-18"><a href="http://dwm.infographie-sup.be/category/workshops/" title="Voir tous les articles classés dans workshops">workshops</a></li>
+					</ul>
+				</li>
+				<li id="meta-2" class="widget-container widget_meta">
+					<h3 class="widget-title">Méta</h3>			
+					<ul>
+						<li><a rel="nofollow" href="http://dwm.infographie-sup.be/wp-login.php?action=register">Inscription</a></li>			<li><a rel="nofollow" href="http://dwm.infographie-sup.be/wp-login.php">Connexion</a></li>
+						<li><a href="http://dwm.infographie-sup.be/feed/" title="Suivez ce site par syndication RSS 2.0">Flux <abbr title="Really Simple Syndication">RSS</abbr> des articles</a></li>
+						<li><a href="http://dwm.infographie-sup.be/comments/feed/" title="Les derniers commentaires pour tous les articles, au format RSS"><abbr title="Really Simple Syndication">RSS</abbr> des commentaires</a></li>
+						<li><a href="http://www.wordpress-fr.net/" title="Propulsé par WordPress, plate-forme de publication personnelle sémantique de pointe.">WordPress.org</a></li>
+					</ul>
+				</li>
+				<li id="social_connect-2" class="widget-container widget_social_connect">
+					<h3 class="widget-title">Se connecter/ S’enregistrer</h3>
+					<div class="social_connect_ui ">
+						<div class="social_connect_form" title="Social Connect">
+							<a href="javascript:void(0);" title="Facebook" class="social_connect_login_facebook"><img alt="Facebook" src="http://dwm.infographie-sup.be/wp-content/plugins/social-connect/media/img/facebook_32.png"></a>
+							<a href="javascript:void(0);" title="Twitter" class="social_connect_login_twitter"><img alt="Twitter" src="http://dwm.infographie-sup.be/wp-content/plugins/social-connect/media/img/twitter_32.png"></a>
+							<a href="javascript:void(0);" title="Google" class="social_connect_login_google"><img alt="Google" src="http://dwm.infographie-sup.be/wp-content/plugins/social-connect/media/img/google_32.png"></a>
+							<a href="javascript:void(0);" title="Yahoo" class="social_connect_login_yahoo"><img alt="Yahoo" src="http://dwm.infographie-sup.be/wp-content/plugins/social-connect/media/img/yahoo_32.png"></a>
+						</div>
+
+						<div id="social_connect_facebook_auth">
+							<input type="hidden" name="client_id" value="272843942777500">
+							<input type="hidden" name="redirect_uri" value="http%3A%2F%2Fdwm.infographie-sup.be%2Fwp-content%2Fplugins%2Fsocial-connect%2Ffacebook%2Fcallback.php">
+						</div>
+
+						<div id="social_connect_twitter_auth"><input type="hidden" name="redirect_uri" value="http://dwm.infographie-sup.be/wp-content/plugins/social-connect/twitter/connect.php"></div>
+						<div id="social_connect_google_auth"><input type="hidden" name="redirect_uri" value="http://dwm.infographie-sup.be/wp-content/plugins/social-connect/google/connect.php"></div>
+						<div id="social_connect_yahoo_auth"><input type="hidden" name="redirect_uri" value="http://dwm.infographie-sup.be/wp-content/plugins/social-connect/yahoo/connect.php"></div>
+						<div id="social_connect_wordpress_auth"><input type="hidden" name="redirect_uri" value="http://dwm.infographie-sup.be/wp-content/plugins/social-connect/wordpress/connect.php"></div>
+					
+					</div> <!-- End of social_connect_ui div -->
+					
+				</li>			
+			</ul>
+		</footer>
+		
+	</body>
+</html>
